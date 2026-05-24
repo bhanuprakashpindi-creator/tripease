@@ -1,4 +1,4 @@
-package com.example.tripease;
+package com.example.tripease.Enum;
 
 public enum Gender {
         MALE,

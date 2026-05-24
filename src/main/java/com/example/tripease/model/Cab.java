@@ -1,6 +1,8 @@
-package com.example.tripease;
+package com.example.tripease.model;
 
 import jakarta.persistence.Entity;
+import jakarta.persistence.GeneratedValue;
+import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
 import lombok.AllArgsConstructor;
 import lombok.Getter;
@@ -14,7 +16,8 @@ import lombok.Setter;
 @Entity
 public class Cab {
     @Id
-    private int cabId;
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    private Integer cabId;
     private String cabNumber;
     private String cabModel;
     private double perKmRate;
