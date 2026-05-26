@@ -1,5 +1,6 @@
 package com.example.tripease.dto.response;
 
+
 import lombok.*;
 
 @NoArgsConstructor
@@ -7,8 +8,10 @@ import lombok.*;
 @Getter
 @Setter
 @Builder
-public class CustomerResponse {
+public class DriverResponse {
+    private Integer driverId;
     private String name;
     private int age;
-    private  String emailId;
+    private String emailId;
+
 }
