@@ -11,5 +11,6 @@ public interface DriverRepository extends JpaRepository<Driver,Integer> {
     List<Driver> findByAge(int age);
     @Query("select d from Driver d where d.age > :age")
     List<Driver> findDriverByAgeGreaterThan(@Param("age") int age);
-
+    @Query(value = "select * from driver where cab_id= :cabId",nativeQuery = true)
+    Driver getDriverByCabId(@Param("cabId") int cabId);
 }
